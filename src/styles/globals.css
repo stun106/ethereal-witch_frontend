@@ -1,33 +1,28 @@
-@tailwind base;
+ @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
 
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  .mask-image {
+    mask-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="%23fff"%3E%3Cpath d="M1 2.68A11.7 11.7 0 0 1 5.32 1h5.36C10.92 1 15 5.09 15 8s-4.08 7-4.08 7H5.32A11.7 11.7 0 0 1 1 13.32v-1.64A11.7 11.7 0 0 0 5.32 3h5.36A11.7 11.7 0 0 1 15 2.68v-1.6A11.7 11.7 0 0 0 10.68 1H5.32A11.7 11.7 0 0 0 1 2.68z"%3E%3C/path%3E%3C/svg%3E');
+    -webkit-mask-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="%23fff"%3E%3Cpath d="M1 2.68A11.7 11.7 0 0 1 5.32 1h5.36C10.92 1 15 5.09 15 8s-4.08 7-4.08 7H5.32A11.7 11.7 0 0 1 1 13.32v-1.64A11.7 11.7 0 0 0 5.32 3h5.36A11.7 11.7 0 0 1 15 2.68v-1.6A11.7 11.7 0 0 0 10.68 1H5.32A11.7 11.7 0 0 0 1 2.68z"%3E%3C/path%3E%3C/svg%3E');
+    mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat;
+    mask-size: cover;
+    -webkit-mask-size: cover;
   }
 }
+
+.background {
+  background-image: url('/bg_landingpage.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.moon-dance-regular {
+  font-family: "Moon Dance", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
